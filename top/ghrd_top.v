@@ -466,7 +466,7 @@ module ghrd_top (
 		.hps_0_f2h_warm_reset_req_reset_n               (~hps_warm_reset),                     //        hps_0_f2h_warm_reset_req.reset_n
 		.hps_0_h2f_user0_clock_clk                      (h2f_user0_clock),                     //           hps_0_h2f_user0_clock.clk
 		.alt_vip_cl_cvo_0_clocked_video_vid_clk         (pixel_clk),                           //  alt_vip_cl_cvo_0_clocked_video.vid_clk
-		.alt_vip_cl_cvo_0_clocked_video_vid_data        ({vid_r,vid_b,vid_g}),                 //                            .vid_data
+		.alt_vip_cl_cvo_0_clocked_video_vid_data        ({vid_r,vid_g,vid_b}),                 //                            .vid_data
 		.alt_vip_cl_cvo_0_clocked_video_underflow       (),                                    //                                .underflow
 		.alt_vip_cl_cvo_0_clocked_video_vid_mode_change (),                                    //                                .vid_mode_change
 		.alt_vip_cl_cvo_0_clocked_video_vid_std         (),                                    //                                .vid_std
