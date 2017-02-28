@@ -929,7 +929,7 @@
   <parameter name="MEM_CK_PHASE" value="0.0" />
   <parameter name="MEM_CK_WIDTH" value="1" />
   <parameter name="MEM_CLK_EN_WIDTH" value="1" />
-  <parameter name="MEM_CLK_FREQ" value="300.0" />
+  <parameter name="MEM_CLK_FREQ" value="400.0" />
   <parameter name="MEM_CLK_FREQ_MAX" value="666.667" />
   <parameter name="MEM_COL_ADDR_WIDTH" value="10" />
   <parameter name="MEM_CS_WIDTH" value="1" />
@@ -956,7 +956,7 @@
   <parameter name="MEM_RTT_NOM" value="RZQ/4" />
   <parameter name="MEM_RTT_WR" value="RZQ/4" />
   <parameter name="MEM_SRT" value="Normal" />
-  <parameter name="MEM_TCL" value="6" />
+  <parameter name="MEM_TCL" value="7" />
   <parameter name="MEM_TFAW_NS" value="30.0" />
   <parameter name="MEM_TINIT_US" value="500" />
   <parameter name="MEM_TMRD_CK" value="4" />
@@ -973,7 +973,7 @@
   <parameter name="MEM_VENDOR" value="Other" />
   <parameter name="MEM_VERBOSE" value="true" />
   <parameter name="MEM_VOLTAGE" value="1.5V DDR3" />
-  <parameter name="MEM_WTCL" value="5" />
+  <parameter name="MEM_WTCL" value="6" />
   <parameter name="MPU_EVENTS_Enable" value="false" />
   <parameter name="MRS_MIRROR_PING_PONG_ATSO" value="false" />
   <parameter name="MULTICAST_EN" value="false" />
