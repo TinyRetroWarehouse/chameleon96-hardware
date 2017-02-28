@@ -696,7 +696,7 @@
   <parameter name="FAMILY" value="Cyclone V" />
   <parameter name="MAX_IMAGE_HEIGHT" value="1080" />
   <parameter name="MAX_IMAGE_WIDTH" value="1920" />
-  <parameter name="MEM_PORT_WIDTH" value="256" />
+  <parameter name="MEM_PORT_WIDTH" value="128" />
   <parameter name="NUMBER_OF_CHANNELS_IN_PARALLEL" value="4" />
   <parameter name="NUMBER_OF_CHANNELS_IN_SEQUENCE" value="1" />
   <parameter name="RMASTER_BURST_TARGET" value="32" />
