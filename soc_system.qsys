@@ -689,18 +689,18 @@
   <parameter name="V_SYNC_LENGTH" value="5" />
  </module>
  <module name="alt_vip_vfr_0" kind="alt_vip_vfr" version="14.0" enabled="1">
-  <parameter name="AUTO_CLOCK_MASTER_CLOCK_RATE" value="148500000" />
-  <parameter name="AUTO_CLOCK_RESET_CLOCK_RATE" value="148500000" />
+  <parameter name="AUTO_CLOCK_MASTER_CLOCK_RATE" value="111375000" />
+  <parameter name="AUTO_CLOCK_RESET_CLOCK_RATE" value="111375000" />
   <parameter name="BITS_PER_PIXEL_PER_COLOR_PLANE" value="8" />
   <parameter name="CLOCKS_ARE_SEPARATE" value="1" />
   <parameter name="FAMILY" value="Cyclone V" />
   <parameter name="MAX_IMAGE_HEIGHT" value="1080" />
   <parameter name="MAX_IMAGE_WIDTH" value="1920" />
-  <parameter name="MEM_PORT_WIDTH" value="128" />
+  <parameter name="MEM_PORT_WIDTH" value="256" />
   <parameter name="NUMBER_OF_CHANNELS_IN_PARALLEL" value="4" />
   <parameter name="NUMBER_OF_CHANNELS_IN_SEQUENCE" value="1" />
-  <parameter name="RMASTER_BURST_TARGET" value="32" />
-  <parameter name="RMASTER_FIFO_DEPTH" value="64" />
+  <parameter name="RMASTER_BURST_TARGET" value="64" />
+  <parameter name="RMASTER_FIFO_DEPTH" value="128" />
  </module>
  <module
    name="f2sdram_only_master"
@@ -835,8 +835,8 @@
   <parameter name="ENABLE_USER_ECC" value="false" />
   <parameter name="EXPORT_AFI_HALF_CLK" value="false" />
   <parameter name="EXTRA_SETTINGS" value="" />
-  <parameter name="F2H_AXI_CLOCK_FREQ" value="148500000" />
-  <parameter name="F2H_SDRAM0_CLOCK_FREQ" value="148500000" />
+  <parameter name="F2H_AXI_CLOCK_FREQ" value="111375000" />
+  <parameter name="F2H_SDRAM0_CLOCK_FREQ" value="111375000" />
   <parameter name="F2H_SDRAM1_CLOCK_FREQ" value="100" />
   <parameter name="F2H_SDRAM2_CLOCK_FREQ" value="100" />
   <parameter name="F2H_SDRAM3_CLOCK_FREQ" value="100" />
@@ -2185,7 +2185,7 @@
   <parameter name="gui_multiply_factor" value="1" />
   <parameter name="gui_number_of_clocks" value="2" />
   <parameter name="gui_operation_mode" value="normal" />
-  <parameter name="gui_output_clock_frequency0" value="148.5" />
+  <parameter name="gui_output_clock_frequency0" value="111.375" />
   <parameter name="gui_output_clock_frequency1" value="148.5" />
   <parameter name="gui_output_clock_frequency10" value="100.0" />
   <parameter name="gui_output_clock_frequency11" value="100.0" />
