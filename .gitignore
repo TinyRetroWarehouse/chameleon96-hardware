@@ -1,48 +1,36 @@
 # ignore Quartus II generated files
-*sopc_*
-*.jdi
-*.ptf.*
-*.sof
-*.pof
-*.qws
-*.smsg
-*_inst.vhd
-*_generation_script*
-*.done
-*.txt
-*.qarlog
-*.rpt
-*.summary
-*.qws
-*.cmp
-*.csv
-*.eqn
-*.html
-*.jpg
 *.json
-*.bak
-*.qar
-*.sopc_builder
-*.sopcinfo
-*example*
-*~
-#*.sdc
-*.tcl
-*.pin
-*.mif
-*.hex
+*.rpt
+*_pin_model_dump.txt
+*_summary.csv
+*description.txt
+hps_sdram_p0_all_pins.txt
+hps_sdram_p0_summary.csv
+output_files/*.rpt
+output_files/*.done
+output_files/*.smsg
+output_files/*.summary
+output_files/*.jdi
+output_files/*.pin
+output_files/*.sld
+sd_fat.tar.gz
+software/preloader/preloader-mkpimage.bin
+software/preloader/preloader.ds
+software/preloader/settings.bsp
+software/preloader/uboot.ds
+u-boot.scr
 
 # ignore Quartus II generated folders
 db/
 incremental_db/
+greybox_tmp/
 simulation/
+# this next folder should match the base name of the .qsys file
+soc_system/
+software/preloader/uboot-socfpga/
+stamp/
 timing/
 testbench/
 *_sim/
 .qsys_edit/
-output_files/
-hps_isw_handoff/
-# we might want to track this if we start making spl or u-boot code changes here, but for now we will ignore
-software/
-# this should be the name of the .qsys file
-soc_system/
+
