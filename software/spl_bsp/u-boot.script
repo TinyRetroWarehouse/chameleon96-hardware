@@ -1,0 +1,28 @@
+# Chameleon96 u-boot script for use with altvipfb driver design
+
+echo ***** Configuring HDMI Transmitter *****
+# setup for 1080p RGB passthrough
+i2c mw 37 FF.1 02 1
+i2c mw 73 FF.1 00 1
+i2c mw 73 A0.1 06 1
+i2c mw 73 CB.1 00 1
+# it seems that when TDA19988 gets hot and the board is power cycled, this next line is required; otherwise, not required on cold boot
+i2c mw 73 F0.1 00 1
+i2c mw 73 18.1 FF 1
+i2c mw 73 19.1 FF 1
+i2c mw 73 1A.1 FF 1
+i2c mw 73 20.1 45 1
+i2c mw 73 21.1 23 1
+i2c mw 73 22.1 01 1
+i2c mw 73 23.1 20 1
+
+echo ***** Configuring FPGA *****
+fatload mmc 0:1 $fpgadata soc_system.rbf;
+fpga load 0 $fpgadata $filesize;
+setenv fdtimage soc_system.dtb;
+
+run bridge_enable_handoff;
+
+echo ***** Starting Linux *****
+run mmcload;
+run mmcboot;

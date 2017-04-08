@@ -13,11 +13,17 @@ output_files/*.summary
 output_files/*.jdi
 output_files/*.pin
 output_files/*.sld
+output_files/soc_system_*.rbf
+!output_files/soc_system_165m_128b.rbf
 sd_fat.tar.gz
 software/preloader/preloader-mkpimage.bin
 software/preloader/preloader.ds
 software/preloader/settings.bsp
 software/preloader/uboot.ds
+software/spl_bsp/preloader-mkpimage.bin
+software/spl_bsp/preloader.ds
+software/spl_bsp/settings.bsp
+software/spl_bsp/uboot.ds
 u-boot.scr
 
 # ignore Quartus II generated folders
@@ -28,6 +34,7 @@ simulation/
 # this next folder should match the base name of the .qsys file
 soc_system/
 software/preloader/uboot-socfpga/
+software/spl_bsp/uboot-socfpga/
 stamp/
 timing/
 testbench/
