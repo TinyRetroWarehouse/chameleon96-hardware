@@ -1,0 +1,21 @@
+/ {
+	fragment@0 {
+	        __overlay__ {
+	                fpga-bridges = <&fpga_bridge0 &fpga_bridge1 &fpga_bridge2 &fpga_bridge3>;
+
+			clk_0: clk_0 {
+				compatible = "fixed-clock";
+				#clock-cells;
+				clock-frequency;
+				clock-output-names = "clk_0-clk";
+			};
+
+			pll_stream: pll_stream {
+				compatible = "fixed-clock";
+				#clock-cells;
+				clock-frequency;
+				clock-output-names = "pll_stream-clk";
+			};
+		};
+	};
+};

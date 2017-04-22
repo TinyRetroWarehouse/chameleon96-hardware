@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="soc_system" kind="soc_system" version="1.0" fabric="QSYS">
- <!-- Format version 16.1 196 (Future versions may contain additional information.) -->
- <!-- 2017.02.28.17:07:46 -->
+ <!-- Format version 16.1 203 (Future versions may contain additional information.) -->
+ <!-- 2017.04.18.21:59:50 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1488319664</value>
+  <value>1492567156</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -85055,7 +85055,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1488319664</value>
+   <value>1492567156</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -85075,7 +85075,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1488319664</value>
+   <value>1492567156</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -85091,7 +85091,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1488319664</value>
+   <value>1492567156</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -102267,6 +102267,6 @@ parameters are a RESULT of the module parameters. -->
   <displayName>Avalon Streaming Connection</displayName>
   <version>16.1</version>
  </plugin>
- <reportVersion>16.1 196</reportVersion>
+ <reportVersion>16.1 203</reportVersion>
  <uniqueIdentifier></uniqueIdentifier>
 </EnsembleReport>
