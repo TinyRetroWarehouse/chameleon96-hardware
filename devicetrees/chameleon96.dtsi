@@ -10,11 +10,11 @@
 				clock-output-names = "clk_0-clk";
 			};
 
-			pll_stream: pll_stream {
+			video_pll: video_pll {
 				compatible = "fixed-clock";
 				#clock-cells;
 				clock-frequency;
-				clock-output-names = "pll_stream-clk";
+				clock-output-names = "video_pll-clk";
 			};
 		};
 	};
