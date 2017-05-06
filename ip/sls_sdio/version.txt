@@ -1,0 +1,22 @@
+//******************************************************************************************************
+//
+//  File        : Version.txt
+//
+//  Author      : SLS
+//
+//  Description : This file shows the release version of the contents used inside the setup of
+//                SD/eMMC Host Controller IP Core.
+//
+//
+//  Note        : DON'T EDIT THIS FILE MANUALLY. THIS FILE IS USED TO KEEP TRACK OF SETUP UPDATE.
+//
+//******************************************************************************************************
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//   Sr No     |                Setup Content                                  |     Release version   //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    1                   SDIO Host Controller IP Core RTL Design files              1.14
+

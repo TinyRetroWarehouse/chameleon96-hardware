@@ -66,7 +66,7 @@ module ghrd_top (
 // ****************************************************************************
 
 // HPS SDRAM
-	output [13:0]  memory_mem_a,
+	output [14:0]  memory_mem_a,
 	output [2:0]   memory_mem_ba,
 	output         memory_mem_ck,
 	output         memory_mem_ck_n,
@@ -316,7 +316,20 @@ module ghrd_top (
    wire scl_o;
    wire sda_o_e;
    wire sda_o;
-  
+	
+// sdio connections for WiFi/BLE module
+	wire sd_cmd_i;
+	wire sd_cmd_o;
+	wire sd_cmd_oe_o;
+	wire sd_data0_i;
+	wire sd_data1_i;
+	wire sd_data2_i;
+	wire sd_data3_i;
+	wire sd_data0_o;
+	wire sd_data1_o;
+	wire sd_data2_o;
+	wire sd_data3_o;
+	wire sd_data_oe_o;
 
 // connection of internal logic
 //  assign user_led_fpga = ~fpga_led_internal;
@@ -356,6 +369,12 @@ module ghrd_top (
    ALT_IOBUF scl_iobuf (.i(1'b0), .oe(scl_o_e), .o(scl_o), .io(CV_HPS_1V8_I2C2_SCL_via_FPGA)); //declared bi-directional buffer for scl
    ALT_IOBUF sda_iobuf (.i(1'b0), .oe(sda_o_e), .o(sda_o), .io(CV_HPS_1V8_I2C2_SDA_via_FPGA)); //declared bi-directional buffer for sda
 
+   ALT_IOBUF sd_cmd   (.i(sd_cmd_i), .oe(sd_cmd_oe_o),  .o(sd_cmd_o), .io(CV_FPGA_1V8_RF_SD_CMD)); //declared bi-directional buffer for sd_cmd
+   ALT_IOBUF sd_data0 (.i(sd_data0_i), .oe(sd_data_oe_o), .o(sd_data0_o), .io(CV_FPGA_1V8_RF_SD_DATA0)); //declared bi-directional buffer for sd_data0
+   ALT_IOBUF sd_data1 (.i(sd_data1_i), .oe(sd_data_oe_o), .o(sd_data1_o), .io(CV_FPGA_1V8_RF_SD_DATA1)); //declared bi-directional buffer for sd_data1
+   ALT_IOBUF sd_data2 (.i(sd_data2_i), .oe(sd_data_oe_o), .o(sd_data2_o), .io(CV_FPGA_1V8_RF_SD_DATA2)); //declared bi-directional buffer for sd_data2
+   ALT_IOBUF sd_data3 (.i(sd_data3_i), .oe(sd_data_oe_o), .o(sd_data3_o), .io(CV_FPGA_1V8_RF_SD_DATA3)); //declared bi-directional buffer for sd_data3
+	
 // Test to see that the FPGA got programmed
 // assign CV_HPS_2V5_GPIO_LED_RF1_via_FPGA = 1'b1;
 //	assign CV_HPS_2V5_GPIO_LED_RF2_via_FPGA = 1'b1;
@@ -491,9 +510,24 @@ module ghrd_top (
 //		.pixel_clk_pll_outclk0_clk                      (pixel_clk)                            //           pixel_clk_pll_outclk0.clk
 // use these 2 lines for shared plls
 		.singal_tap_pll_outclk0_1_clk                   (),                                    //        singal_tap_pll_outclk0_1.clk
-		.pixel_clk_pll_outclk0_1_clk                    (pixel_clk)                            //         pixel_clk_pll_outclk0_1.clk
-	);
-
+		.pixel_clk_pll_outclk0_1_clk                    (pixel_clk),                           //         pixel_clk_pll_outclk0_1.clk
+		.sd_host_controller_0_conduit_end_CMD_i       (sd_cmd_i),                              // sd_host_controller_0_conduit_end.CMD_i
+		.sd_host_controller_0_conduit_end_DAT0_i      (sd_data0_i),                            //                                 .DAT0_i
+		.sd_host_controller_0_conduit_end_DAT1_i      (sd_data1_i),                            //                                 .DAT1_i
+		.sd_host_controller_0_conduit_end_DAT2_i      (sd_data2_i),                            //                                 .DAT2_i
+		.sd_host_controller_0_conduit_end_DAT3_i      (sd_data3_i),                            //                                 .DAT3_i
+		.sd_host_controller_0_conduit_end_In          (1'b1),                                  //                                 .In
+		.sd_host_controller_0_conduit_end_Wp          (1'b1),                                  //                                 .Wp
+		.sd_host_controller_0_conduit_end_Busy        (),                                      //                                 .Busy
+		.sd_host_controller_0_conduit_end_CLK_o       (CV_FPGA_1V8_RF_SD_CLK),                 //                                 .CLK_o
+		.sd_host_controller_0_conduit_end_CMD_o       (sd_cmd_o),                              //                                 .CMD_o
+		.sd_host_controller_0_conduit_end_DAT0_o      (sd_data0_o),                            //                                 .DAT0_o
+		.sd_host_controller_0_conduit_end_DAT1_o      (sd_data1_o),                            //                                 .DAT1_o
+		.sd_host_controller_0_conduit_end_DAT2_o      (sd_data2_o),                            //                                 .DAT2_o
+		.sd_host_controller_0_conduit_end_DAT3_o      (sd_data3_o),                            //                                 .DAT3_o
+		.sd_host_controller_0_conduit_end_CMD_oe_o    (sd_cmd_oe),                             //                                 .CMD_oe_o
+		.sd_host_controller_0_conduit_end_DATA_oe_o   (sd_data_oe)                             //                                 .DATA_oe_o
+);
 
 // Source/Probe megawizard instance
 hps_reset hps_reset_inst (
