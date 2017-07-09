@@ -306,10 +306,11 @@ module ghrd_top (
    wire        vid_v_sync;
    wire        vid_h_sync;
    wire        vid_datavalid;
-	
-	wire [66:0]	loan_io_in;
-	wire [66:0]	loan_io_out;
-	wire [66:0]	loan_io_oe;
+
+// Loan I/O for driver User LEDs via FPGA (Qsys PIO)
+//	wire [66:0]	loan_io_in;
+//	wire [66:0]	loan_io_out;
+//	wire [66:0]	loan_io_oe;
 	
 // i2c2 connections through FPGA for TDA19988
 	wire scl_o_e;
@@ -361,9 +362,14 @@ module ghrd_top (
    assign CV_FPGA_1V8_LCD_DAT5  = vid_g[5];
    assign CV_FPGA_1V8_LCD_DAT4  = vid_g[4];
    assign CV_FPGA_1V8_LCD_DAT3  = vid_g[3];
-	
-	assign loan_io_out = {{34{1'b0}},~fpga_led_internal[3],{6{1'b0}},~fpga_led_internal[2],{2{1'b0}},~fpga_led_internal[1],{7{1'b0}},~fpga_led_internal[0],{14{1'b0}}};
-	assign loan_io_oe  = {{34{1'b0}},{1'b1}               ,{6{1'b1}},{1'b1}               ,{2{1'b0}},{1'b1}               ,{7{1'b0}},{1'b1}               ,{14{1'b0}}};
+
+// Loan I/O for driver User LEDs via FPGA (Qsys PIO)	
+// To enable this, open Qsys, edit HPS component -> Peripheral Pins tab,
+// scroll down to Peripheral Mux Table and enable LOANIO14, LOANIO22, LOANIO25, LOANIO32,
+// uncomment loanio wires above,next 2 lines below, and lines in Qsys system component declaration below.
+
+//	assign loan_io_out = {{34{1'b0}},~fpga_led_internal[3],{6{1'b0}},~fpga_led_internal[2],{2{1'b0}},~fpga_led_internal[1],{7{1'b0}},~fpga_led_internal[0],{14{1'b0}}};
+//	assign loan_io_oe  = {{34{1'b0}},{1'b1}               ,{6{1'b1}},{1'b1}               ,{2{1'b0}},{1'b1}               ,{7{1'b0}},{1'b1}               ,{14{1'b0}}};
 
   
    ALT_IOBUF scl_iobuf (.i(1'b0), .oe(scl_o_e), .o(scl_o), .io(CV_HPS_1V8_I2C2_SCL_via_FPGA)); //declared bi-directional buffer for scl
@@ -460,9 +466,9 @@ module ghrd_top (
 		.hps_0_hps_io_hps_io_gpio_inst_LOANIO22       (CV_HPS_1V8_GPIO22_via_NAND_DQ3),        //                                .hps_io_gpio_inst_LOANIO22
 		.hps_0_hps_io_hps_io_gpio_inst_LOANIO25       (CV_HPS_1V8_GPIO25_via_NAND_DQ6),        //                                .hps_io_gpio_inst_LOANIO25
 		.hps_0_hps_io_hps_io_gpio_inst_LOANIO32       (CV_HPS_1V8_GPIO32_via_QSPI_IO3),        //                                .hps_io_gpio_inst_LOANIO32		
-		.hps_0_h2f_loan_io_in                         (loan_io_in),                            //               hps_0_h2f_loan_io.in
-		.hps_0_h2f_loan_io_out                        (loan_io_out),                           //                                .out
-		.hps_0_h2f_loan_io_oe                         (loan_io_oe),                            //                                .oe		
+//		.hps_0_h2f_loan_io_in                         (loan_io_in),                            //               hps_0_h2f_loan_io.in
+//		.hps_0_h2f_loan_io_out                        (loan_io_out),                           //                                .out
+//		.hps_0_h2f_loan_io_oe                         (loan_io_oe),                            //                                .oe		
 		.hps_0_i2c2_clk_via_fpga_hdmi_clk               (scl_o_e),                             //    hps_0_i2c2_clk_via_fpga_hdmi.clk
 		.hps_0_i2c2_scl_in_via_fpga_hdmi_clk            (scl_o),                               // hps_0_i2c2_scl_in_via_fpga_hdmi.clk
 		.hps_0_i2c2_via_fpga_hdmi_out_data              (sda_o_e),                             //        hps_0_i2c2_via_fpga_hdmi.out_data
