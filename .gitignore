@@ -1,9 +1,12 @@
 # ignore Quartus II generated files
 *.json
+*.qws
 *.rpt
 *_pin_model_dump.txt
 *_summary.csv
 *description.txt
+#hps_isw_handoff/soc_system_hps_0/*.xml
+#hps_isw_handoff/soc_system_hps_0/id
 hps_sdram_p0_all_pins.txt
 hps_sdram_p0_summary.csv
 output_files/*.rpt
@@ -14,6 +17,7 @@ output_files/*.jdi
 output_files/*.pin
 output_files/*.sld
 output_files/soc_system_*.rbf
+output_files/*.sof
 !output_files/soc_system_165m_128b.rbf
 sd_fat.tar.gz
 software/preloader/preloader-mkpimage.bin

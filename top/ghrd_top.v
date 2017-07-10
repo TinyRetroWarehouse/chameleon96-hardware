@@ -438,23 +438,23 @@ module ghrd_top (
 		.hps_0_hps_io_hps_io_i2c3_inst_SCL            (CV_HPS_1V8_I2C3_SCL_via_NAND_DQ2),      //                                .hps_io_i2c3_inst_SCL
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO00         (CV_HPS_3V3_GPIO0_via_RGMII0_TX_CLK),    //                                .hps_io_gpio_inst_GPIO00
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO09         (CV_HPS_3V3_GPIO9_via_RGMII0_TX_CTL),    //                                .hps_io_gpio_inst_GPIO09
-//		.hps_0_hps_io_hps_io_gpio_inst_GPIO14         (CV_HPS_1V8_GPIO14_via_NAND_ALE),        //                                .hps_io_gpio_inst_GPIO14
+		.hps_0_hps_io_hps_io_gpio_inst_GPIO14         (CV_HPS_1V8_GPIO14_via_NAND_ALE),        //                                .hps_io_gpio_inst_GPIO14
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO15         (CV_HPS_1V8_GPIO15_via_NAND_CE),         //                                .hps_io_gpio_inst_GPIO15
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO16         (CV_HPS_1V8_GPIO16_via_NAND_CLE),        //                                .hps_io_gpio_inst_GPIO16
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO17         (CV_HPS_1V8_GPIO17_via_NAND_RE),         //                                .hps_io_gpio_inst_GPIO17
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO18         (CV_HPS_1V8_GPIO18_via_NAND_RB),         //                                .hps_io_gpio_inst_GPIO18
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO19         (CV_HPS_1V8_GPIO19_via_NAND_DQ0),        //                                .hps_io_gpio_inst_GPIO19
-//		.hps_0_hps_io_hps_io_gpio_inst_GPIO22         (CV_HPS_1V8_GPIO22_via_NAND_DQ3),        //                                .hps_io_gpio_inst_GPIO22
+		.hps_0_hps_io_hps_io_gpio_inst_GPIO22         (CV_HPS_1V8_GPIO22_via_NAND_DQ3),        //                                .hps_io_gpio_inst_GPIO22
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO23         (CV_HPS_1V8_GPIO23_via_NAND_DQ4),        //                                .hps_io_gpio_inst_GPIO23
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO24         (CV_HPS_1V8_GPIO24_via_NAND_DQ5),        //                                .hps_io_gpio_inst_GPIO24
-//		.hps_0_hps_io_hps_io_gpio_inst_GPIO25         (CV_HPS_1V8_GPIO25_via_NAND_DQ6),        //                                .hps_io_gpio_inst_GPIO25
+		.hps_0_hps_io_hps_io_gpio_inst_GPIO25         (CV_HPS_1V8_GPIO25_via_NAND_DQ6),        //                                .hps_io_gpio_inst_GPIO25
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO26         (CV_HPS_1V8_GPIO26_via_NAND_DQ7),        //                                .hps_io_gpio_inst_GPIO26
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO27         (CV_HPS_1V8_GPIO27_via_NAND_WP),         //                                .hps_io_gpio_inst_GPIO27
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO28         (CV_HPS_1V8_GPIO28_via_NAND_WE),         //                                .hps_io_gpio_inst_GPIO28
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO29         (CV_HPS_1V8_GPIO29_via_QSPI_IO0),        //                                .hps_io_gpio_inst_GPIO29
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO30         (CV_HPS_1V8_GPIO30_via_QSPI_IO1),        //                                .hps_io_gpio_inst_GPIO30
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO31         (CV_HPS_1V8_GPIO31_via_QSPI_IO2),        //                                .hps_io_gpio_inst_GPIO31
-//		.hps_0_hps_io_hps_io_gpio_inst_GPIO32         (CV_HPS_1V8_GPIO32_via_QSPI_IO3),        //                                .hps_io_gpio_inst_GPIO32
+		.hps_0_hps_io_hps_io_gpio_inst_GPIO32         (CV_HPS_1V8_GPIO32_via_QSPI_IO3),        //                                .hps_io_gpio_inst_GPIO32
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO33         (CV_HPS_1V8_GPIO33_via_QSPI_SS0),        //                                .hps_io_gpio_inst_GPIO33
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO34         (CV_HPS_1V8_GPIO34_via_QSPI_CLK),        //                                .hps_io_gpio_inst_GPIO34
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO37         (CV_HPS_3V3_GPIO37_via_SDMMC_PWREN),     //                                .hps_io_gpio_inst_GPIO37
@@ -462,10 +462,10 @@ module ghrd_top (
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO48         (CV_HPS_1V8_GPIO48_via_TRACE_CLK),       //                                .hps_io_gpio_inst_GPIO48
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO53         (CV_HPS_1V8_GPIO53_via_TRACE_D4),        //                                .hps_io_gpio_inst_GPIO53
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO54         (CV_HPS_1V8_GPIO54_via_TRACE_D5),        //                                .hps_io_gpio_inst_GPIO54
-		.hps_0_hps_io_hps_io_gpio_inst_LOANIO14       (CV_HPS_1V8_GPIO14_via_NAND_ALE),        //                                .hps_io_gpio_inst_LOANIO14
-		.hps_0_hps_io_hps_io_gpio_inst_LOANIO22       (CV_HPS_1V8_GPIO22_via_NAND_DQ3),        //                                .hps_io_gpio_inst_LOANIO22
-		.hps_0_hps_io_hps_io_gpio_inst_LOANIO25       (CV_HPS_1V8_GPIO25_via_NAND_DQ6),        //                                .hps_io_gpio_inst_LOANIO25
-		.hps_0_hps_io_hps_io_gpio_inst_LOANIO32       (CV_HPS_1V8_GPIO32_via_QSPI_IO3),        //                                .hps_io_gpio_inst_LOANIO32		
+//		.hps_0_hps_io_hps_io_gpio_inst_LOANIO14       (CV_HPS_1V8_GPIO14_via_NAND_ALE),        //                                .hps_io_gpio_inst_LOANIO14
+//		.hps_0_hps_io_hps_io_gpio_inst_LOANIO22       (CV_HPS_1V8_GPIO22_via_NAND_DQ3),        //                                .hps_io_gpio_inst_LOANIO22
+//		.hps_0_hps_io_hps_io_gpio_inst_LOANIO25       (CV_HPS_1V8_GPIO25_via_NAND_DQ6),        //                                .hps_io_gpio_inst_LOANIO25
+//		.hps_0_hps_io_hps_io_gpio_inst_LOANIO32       (CV_HPS_1V8_GPIO32_via_QSPI_IO3),        //                                .hps_io_gpio_inst_LOANIO32		
 //		.hps_0_h2f_loan_io_in                         (loan_io_in),                            //               hps_0_h2f_loan_io.in
 //		.hps_0_h2f_loan_io_out                        (loan_io_out),                           //                                .out
 //		.hps_0_h2f_loan_io_oe                         (loan_io_oe),                            //                                .oe		
